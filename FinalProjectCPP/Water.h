@@ -14,5 +14,6 @@ public:
 	Water(const Water& w);//copy ctor
 	virtual ~Water();//dctor
 	virtual void print() const;//print func
+	virtual const char* get_type() { return "Water"; }
 };
 

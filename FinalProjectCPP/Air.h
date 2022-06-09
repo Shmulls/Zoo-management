@@ -14,5 +14,6 @@ public:
 	Air(const Air& A);//copy ctor
 	virtual ~Air();//dctor
 	virtual void print() const;//print func
+	virtual const char* get_type() { return "Air"; }
 };
 

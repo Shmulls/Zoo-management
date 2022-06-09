@@ -14,4 +14,5 @@ public:
 	Land(const Land& L);//copy ctor
 	virtual ~Land() {}//dctor
 	virtual void print() const;//print func
+	virtual const char* get_type() { return "Land"; }
 };

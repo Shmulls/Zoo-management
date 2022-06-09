@@ -115,7 +115,7 @@ void ZooManagement::Init()
 			{
 				cout << "The animals are: " << endl;
 				cout << "----------------- " << endl;
-				cout << "1. Dolphin" << endl << "2. Whale" << endl << "3. Crocodil" << endl;
+				cout << "1. Dolphin" << endl << "2. Whale" << endl << "3. Crocodile" << endl;
 				cin >> aftertype;
 				cout << endl;
 				if (aftertype == 1)//dolphin
@@ -328,15 +328,48 @@ void ZooManagement::Init()
 		}
 		case(3)://track animal
 		{
-			cout << endl << "Please enter animal's name to show: ";
-			cin >> TempName;
-			while (Vaild_Name(TempName) == false)
+			cout << endl << "Please enter type of animal to track: " << endl << "1.Land" << endl << "2.Water" << endl << "3.Air" << endl;;
+			cin >> choose;
+
+			if (choose == 1)
 			{
-				cout << "Enter name:";
-				cin >> TempName;
+				for (int i = 0; i < Size; i++)
+				{
+					Land* temp = dynamic_cast<Land*>(Arr[i]);
+					if (temp)
+					{
+						temp->print();
+					}
+
+				}
 			}
-			if (Find(TempName) == false)//check if already exist
-				cout << "Name doesnt exist." << endl;
+			
+
+			if (choose == 2)
+			{
+				for (int i = 0; i < Size; i++)
+				{
+					Water* temp = dynamic_cast<Water*>(Arr[i]);
+					if (temp)
+					{
+						temp->print();
+					}
+
+				}
+			}
+
+			if (choose == 3)
+			{
+				for (int i = 0; i < Size; i++)
+				{
+					Air* temp = dynamic_cast<Air*>(Arr[i]);
+					if (temp)
+					{
+						temp->print();
+					}
+
+				}
+			}
 
 			break;
 		}

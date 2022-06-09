@@ -27,8 +27,8 @@ public:
 	~ZooManagement();
 	void Init();//menu
 	bool Find(char* name);//track animal by name
-	void operator +=(Animal* a);//add pointer to the array
-	void operator -=(char* name);//remove object from array
+	virtual void operator +=(Animal* a);//add pointer to the array
+	virtual void operator -=(char* name);//remove object from array
 	bool IsExist(char* name);//chack if name is already exist
 	void PrintAll();
 	bool Vaild_Name(char* name);//check if name is valid

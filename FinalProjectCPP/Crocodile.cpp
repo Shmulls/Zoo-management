@@ -24,9 +24,9 @@ Crocodile::Crocodile(const Crocodile& C) : Animal(C), Water(C), Land(C)
 
 void Crocodile::print() const
 {
-	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
+	cout << "~~~~~~~~~~~~~~~~~~~~~~" << endl;
 	cout << "    Land/Water animal    " << endl;
-	cout << "~~~~~~~~~~~~~~~~~~~~" << endl << endl;
+	cout << "~~~~~~~~~~~~~~~~~~~~~~" << endl << endl;
 	cout << "The Animal is: Crocodile" << endl;
 	cout << "Name: " << name << endl;
 	cout << "Age: " << age << endl;

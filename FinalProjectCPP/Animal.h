@@ -18,5 +18,6 @@ public:
 	char* get_name()const { return name;}
 	static int print_static() { return count; }//static value
 	friend class AnimalManagement;//access to static value
+	virtual const char* get_type() = 0;
 };
 

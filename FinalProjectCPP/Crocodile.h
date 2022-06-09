@@ -16,5 +16,6 @@ public:
 	Crocodile(const Crocodile& C);//copy ctor
 	virtual ~Crocodile() {}//dctor
 	virtual void print() const;//print func
+	virtual const char* get_type() { return "Land"; }
 };
 

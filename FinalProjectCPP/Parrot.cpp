@@ -33,7 +33,6 @@ Parrot::Parrot(const Parrot& Pa) : Bird(Pa), Animal(Pa)
 
 void Parrot::print() const
 {
-	Air::print();
 	Bird::print();
 	cout << "The Animal is: Parrot" << endl;
 	cout << "Name: " << name << endl;

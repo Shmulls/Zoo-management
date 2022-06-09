@@ -17,7 +17,6 @@ public:
 	}
 	virtual void print()const
 	{
-		Animal::print();
 		Air::print();
 		if (migratory)
 			cout << "His migratory bird" << endl;
