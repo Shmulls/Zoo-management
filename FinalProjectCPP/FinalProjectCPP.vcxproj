@@ -136,7 +136,7 @@
     <ClInclude Include="Land.h" />
     <ClInclude Include="Lion.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="Seguall.h" />
+    <ClInclude Include="Seagull.h" />
     <ClInclude Include="Shark.h" />
     <ClInclude Include="Water.h" />
     <ClInclude Include="ZooManagement.h" />
@@ -151,7 +151,7 @@
     <ClCompile Include="Land.cpp" />
     <ClCompile Include="Lion.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Seguall.cpp" />
+    <ClCompile Include="Seagull.cpp" />
     <ClCompile Include="Shark.cpp" />
     <ClCompile Include="Water.cpp" />
     <ClCompile Include="ZooManagement.cpp" />
