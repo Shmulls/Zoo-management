@@ -4,7 +4,7 @@ using namespace std;
 #include "Animal.h"
 #include "Air.h"
 
-class Bird : public Air
+class Bird : virtual public Air
 {
 private:
 	bool migratory;

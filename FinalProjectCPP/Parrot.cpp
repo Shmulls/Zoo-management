@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Animal.h"
 #include "Air.h"
+#include "Bird.h"
 #include "Parrot.h"
 using namespace std;
 
@@ -11,7 +12,7 @@ Parrot::Parrot()
 	Colors = NULL;
 }
 
-Parrot::Parrot(char* name, float age, float Max_Height, float Air_Speed, char* Colors) :Bird(name, age, Air_Speed, Max_Height), Animal(name, age)
+Parrot::Parrot(char* name, float age, float air_speed, bool migratory, char* Colors) :Animal(name, age), Air(name, age, air_speed),Bird(name,age, air_speed,migratory)
 {
 	this->Colors = new char[strlen(Colors) + 1];
 	if (this->Colors != NULL)
@@ -33,11 +34,10 @@ Parrot::Parrot(const Parrot& Pa) : Bird(Pa), Animal(Pa)
 void Parrot::print() const
 {
 	Air::print();
+	Bird::print();
 	cout << "The Animal is: Parrot" << endl;
 	cout << "Name: " << name << endl;
 	cout << "Age: " << age << endl;
 	cout << "It's speed is: " << Air_Speed << " Kmh." << endl;
-	cout << "It's max flight height is: " << Max_Height << " Meters." << endl;
-	cout << "It's color is: " << Colors << " Meters." << endl;
-
+	cout << "It's color is: " << Colors << endl;
 }
