@@ -2,22 +2,27 @@
 #include <iostream>
 using namespace std;
 #include "Animal.h"
+#include "Water.h"
 
-class Mammal : virtual public Animal
+class Mammal : public Water
 {
 protected:
-	int speed;
+	char* foodtype;
 public:
-	~Mammal() {}
-	Mammal() { speed = 0; }
-	Mammal(char* name, float age, int speed) : Animal(name, age)
+	~Mammal() { delete[]foodtype; }
+	Mammal() { foodtype = NULL; }
+	Mammal(char* name, float age, char* ft) : Animal(name, age)
 	{
-		this->speed = speed;
+		foodtype = new char[strlen(ft) + 1];
+		if (ft != NULL)
+			strcpy(foodtype, ft);
+		else
+			foodtype = NULL;
 	}
 	virtual void print()const
 	{
 		Animal::print();
-		cout << "Speed: " << speed << endl;
+		cout << "Food type: " << foodtype << endl;
 	}
 };
 
