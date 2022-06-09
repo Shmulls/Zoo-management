@@ -133,7 +133,7 @@
     <ClInclude Include="Crocodile.h" />
     <ClInclude Include="Dolphin.h" />
     <ClInclude Include="Eagle.h" />
-    <ClInclude Include="Hawk.h" />
+    <ClInclude Include="Parrot.h" />
     <ClInclude Include="Land.h" />
     <ClInclude Include="Lion.h" />
     <ClInclude Include="Main.h" />
@@ -148,7 +148,7 @@
     <ClCompile Include="Crocodile.cpp" />
     <ClCompile Include="Dolphin.cpp" />
     <ClCompile Include="Eagle.cpp" />
-    <ClCompile Include="Hawk.cpp" />
+    <ClCompile Include="Parrot.cpp" />
     <ClCompile Include="Land.cpp" />
     <ClCompile Include="Lion.cpp" />
     <ClCompile Include="Main.cpp" />

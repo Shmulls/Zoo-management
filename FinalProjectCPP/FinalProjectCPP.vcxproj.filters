@@ -33,7 +33,7 @@
     <ClInclude Include="Lion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Hawk.h">
+    <ClInclude Include="Parrot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Dolphin.h">
@@ -77,7 +77,7 @@
     <ClCompile Include="Lion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Hawk.cpp">
+    <ClCompile Include="Parrot.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Dolphin.cpp">
