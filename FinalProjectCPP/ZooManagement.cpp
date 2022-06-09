@@ -464,7 +464,7 @@ bool ZooManagement::Find(char* name)
 	return false;//if name doesnt exist
 }
 
-void Data::operator+=(Animal* a)
+void ZooManagement::operator+=(Animal* a)
 {
 	Animal** TempArr = NULL;//Tempory array
 	if (Size == 0)//The array is empty
@@ -489,7 +489,7 @@ void Data::operator+=(Animal* a)
 	delete[] TempArr;//Deleting Temporary array
 }
 
-void Data::operator-=(char* name)
+void ZooManagement::operator-=(char* name)
 {
 	int i = 0, j = 0;
 	Animal** TempArr = NULL;//Tempory array
@@ -520,7 +520,7 @@ void Data::operator-=(char* name)
 }
 
 
-bool Data::IsExist(char* name)
+bool ZooManagement::IsExist(char* name)
 {
 	for (int i = 0; i < Size; i++)
 	{
@@ -530,7 +530,7 @@ bool Data::IsExist(char* name)
 	return false;//name dosent exist
 }
 
-void Data::PrintAll()
+void ZooManagement::PrintAll()
 {
 	cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 	cout << "          **** ANIMALS IN THE ZOO ****        " << endl;
@@ -545,7 +545,7 @@ void Data::PrintAll()
 
 }
 
-bool Data::Vaild_Name(char* name)
+bool ZooManagement::Vaild_Name(char* name)
 {
 	for (int i = 0; i < strlen(name); i++)//running on the name
 	{

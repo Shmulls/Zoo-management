@@ -8,8 +8,8 @@ Animal::Animal()
 
 Animal::Animal(char* name, float age)
 {
-	name = new char[strlen(name) + 1];
-	if (name)
+	this->name = new char [strlen(name) + 1];
+	if (this->name != NULL)
 	{
 		strcpy(this->name, name);
 		this->age = age;
