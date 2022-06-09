@@ -3,24 +3,24 @@
 #include <iostream>
 #include "Animal.h"
 #include "Water.h"
-#include "Dolphin.h"
 #include "Whale.h"
+#include "Mammal.h"
 
 using namespace std;
 
 Whale::Whale()
 {
-	this->vegetarian = false;
+	fit = 0;
 }
 
-Whale::Whale(char* name, float age, float Swim_Speed, float Jump_Height, bool veg) :Dolphin(name, age, Swim_Speed, Jump_Height), Animal(name, age)
+Whale::Whale(char* name, float age, float Swim_Speed, char* foodtype, int fit) : Animal(name, age), Water(name, age, Swim_Speed), Mammal(name, age, Swim_Speed, foodtype)
 {
-	this->vegetarian = veg;
+	this->fit = fit;
 }
 
-Whale::Whale(const Whale& sh) : Dolphin(sh), Animal(sh)
+Whale::Whale(const Whale& s) :Water(s), Mammal(s), Animal(s)
 {
-	this->vegetarian = sh.vegetarian;
+	fit = s.fit;
 }
 
 Whale::~Whale()
@@ -30,15 +30,7 @@ Whale::~Whale()
 void Whale::print() const
 {
 	Water::print();
-	cout << "The Animal is: Whale" << endl;
-	cout << "Name: " << name << endl;
-	cout << "Age: " << age << endl;
-	cout << "It's speed is: " << Swim_Speed << " Kmh." << endl;
-	cout << "It's jump height is: " << Jump_Height << " Meters." << endl;
-	if (this->vegetarian)
-		cout << "This Shark is vegetarian " << endl;
-	else
-		cout << "This Shark is not vegetarian " << endl;
-
+	Mammal::print();
+	cout << "The whale is: " << fit << "fit high" << endl;
 }
 

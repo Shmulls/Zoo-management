@@ -3,17 +3,17 @@
 #include <iostream>
 #include "Animal.h"
 #include "Water.h"
-#include "Dolphin.h"
+#include "Mammal.h"
 
 using namespace std;
 
-class Whale :public Dolphin
+class Whale : public Mammal
 {
 private:
-	bool vegetarian;
+	int fit;
 public:
 	Whale();//default ctor
-	Whale(char* name, float age, float Swim_Speed, float Jump_Height, bool veg);//ctor
+	Whale(char* name, float age, float Swim_Speed, char* foodtype, int fit);
 	Whale(const Whale& sh);//copy ctor
 	virtual ~Whale();//dctor
 	virtual void print() const;//print func
