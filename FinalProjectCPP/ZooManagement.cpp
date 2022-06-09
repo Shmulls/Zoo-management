@@ -1,20 +1,7 @@
-#include "ZooManagement.h"
-#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #define MAX 20
 #include <iostream>
-#include "Air.h"
-#include "Animal.h"
-//#include "Cat.h"
-#include "Crocodile.h"
-#include "Dolphin.h"
-#include "Eagle.h"
-#include "Hawk.h"
-#include "Land.h"
-#include "Lion.h"
-#include "Seguall.h"
-#include "Shark.h"
-#include "Water.h"
+#include "ZooManagement.h"
 
 using namespace std;
 
@@ -34,13 +21,13 @@ ZooManagement::~ZooManagement()
 
 void ZooManagement::Init()
 {
-	char* TempName = new char[MAX];
-	char* TempColor = new char[MAX];
+	char foodtype[MAX], TempName[MAX], TempColor[MAX];
+	int choose = 0, fit = 0;
 	Animal* Temp = NULL;
-	float Age = 0.0, LandSpeed = 0.0, SwimSpeed = 0.0, AirSpeed = 0.0;
+	float LandSpeed = 0.0, SwimSpeed = 0.0, AirSpeed = 0.0;
 	float Weight = 0.0, MaxHeight = 0.0, HeightJump = 0.0, TailLength = 0.0;
-	int choise = 0, type = 0, aftertype, YesNo = 0;
-	bool vegen = false;
+	int choise = 0, type = 0, aftertype, Age = 0;
+	bool migratory = false;
 	while (choise != 5)//menu until exit
 	{
 		cout << endl << "~~~~~~~~ Welcome to the ZOO ~~~~~~~~" << endl;
@@ -91,40 +78,6 @@ void ZooManagement::Init()
 					cout << "Enter the animal's weight:";
 					cin >> Weight;
 					Temp = new Lion(TempName, Age, LandSpeed, Weight);//create pointer of type Lion
-					ZooManagement::operator+=(Temp);
-				}
-				else if (aftertype == 2)//cat
-				{
-					cout << "~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "The animal is: Cat" << endl;
-					cout << "~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "Enter name:";
-					cin >> TempName;
-					while (IsExist(TempName) == true)//check if already exist
-					{
-						cout << "Name already exist, please another name." << endl;
-						cout << "Enter name:";
-						cin >> TempName;
-					}
-					while (Vaild_Name(TempName) == false)//check if name isnt valid
-					{
-						cout << "Enter name:";
-						cin >> TempName;
-					}
-					cout << "Enter age:";
-					cin >> Age;
-					cout << "Enter the animal's speed:";
-					cin >> LandSpeed;
-					cout << "Enter the animal's weight:";
-					cin >> Weight;
-					cout << "Enter the animal's color:";
-					cin >> TempColor;
-					while (Vaild_Name(TempColor) == false)//check if name isnt valid
-					{
-						cout << "Enter the animal's color:";
-						cin >> TempColor;
-					}
-					Temp = new Cat(TempName, Age, LandSpeed, Weight, TempColor);//create pointer of type Cat
 					ZooManagement::operator+=(Temp);
 				}
 				else if (aftertype == 3)//crocodile
@@ -189,16 +142,26 @@ void ZooManagement::Init()
 					cin >> Age;
 					cout << "Enter the animal's speed:";
 					cin >> SwimSpeed;
+
+					cout << "Enter the animal food type: " << endl << "1.Fish" << endl << "2.Meat" << endl;
+					cin >> choose;
+
+					if (choose == 1)
+						strcpy(foodtype, "Fish");
+					else
+						strcpy(foodtype, "Meat");
+
 					cout << "Enter the animal's heigth jump:";
 					cin >> HeightJump;
-					Temp = new Dolphin(TempName, Age, SwimSpeed, HeightJump);//create pointer of type Dolphin
+
+					Temp = new Dolphin(TempName, Age, SwimSpeed, foodtype, HeightJump);//create pointer of type Dolphin
 					ZooManagement::operator+=(Temp);
 				}
 				else if (aftertype == 2)//Shark
 				{
-					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "The animal is: Shark" << endl;
-					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
+					cout << "--------------------" << endl;
+					cout << "The animal is: Whale" << endl;
+					cout << "--------------------" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
 					while (IsExist(TempName) == true)//check if already exist
@@ -218,27 +181,25 @@ void ZooManagement::Init()
 					cin >> SwimSpeed;
 					cout << "Enter the animal's heigth jump:";
 					cin >> HeightJump;
-					cout << "does the animal is vegen? ";
-					cout << " ( 1. yes" << "  0. no )" << endl;
-					cin >> YesNo;
-					while (YesNo != 1 && YesNo != 0)
-					{
-						cout << "Wrong input, please try agian:";
-						cout << "  ( 1. yes" << "  0. no )" << endl;
-						cin >> YesNo;
-					}
-					if (YesNo == 1)
-						vegen = true;
+					cout << "Enter the animal food type: " << endl << "1.Fish" << endl << "2.Meat" << endl;
+					cin >> choose;
+
+					if (choose == 1)
+						strcpy(foodtype, "Fish");
 					else
-						vegen = false;
-					Temp = new Shark(TempName, Age, SwimSpeed, HeightJump, vegen);//create pointer of type Shark
+						strcpy(foodtype, "Meat");
+
+					cout << "Please enter Whale fit:";
+					cin >> fit;
+
+					Temp = new Whale(TempName, Age, SwimSpeed, foodtype, fit);//create pointer of type Whale
 					ZooManagement::operator+=(Temp);
 				}
 				else if (aftertype == 3)//crocodile
 				{
-					cout << "~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+					cout << "------------------------" << endl;
 					cout << "The animal is: Crocodile" << endl;
-					cout << "~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+					cout << "------------------------" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
 					while (IsExist(TempName) == true)//check if already exist
@@ -263,39 +224,6 @@ void ZooManagement::Init()
 					Temp = new Crocodile(TempName, Age, SwimSpeed, LandSpeed, Weight);//create pointer of type Crocodile
 					ZooManagement::operator+=(Temp);
 				}
-				else if (aftertype == 4)//seagull
-				{
-					cout << "~~~~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "The animal is: Seagull" << endl;
-					cout << "~~~~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "Enter name:";
-					cin >> TempName;
-					while (IsExist(TempName) == true)//check if already exist
-					{
-						cout << "Name already exist, please another name." << endl;
-						cout << "Enter name:";
-						cin >> TempName;
-					}
-					while (Vaild_Name(TempName) == false)//check if name isnt valid
-					{
-						cout << "Enter name:";
-						cin >> TempName;
-					}
-					cout << "Enter age:";
-					cin >> Age;
-					cout << "Enter the animal's swim speed:";
-					cin >> SwimSpeed;
-					cout << "Enter the animal's air speed:";
-					cin >> AirSpeed;
-					cout << "Enter the animal's weight:";
-					cin >> Weight;
-					Temp = new Seguall(TempName, Age, SwimSpeed, AirSpeed, Weight);//create pointer of type seagull
-					ZooManagement::operator+=(Temp);
-				}
-				else
-					cout << "Invaild input" << endl;
-				break;
-			}
 			case(3)://Air
 			{
 				cout << "The animals are: " << endl;
@@ -304,9 +232,9 @@ void ZooManagement::Init()
 				cin >> aftertype;
 				if (aftertype == 1)//eagle
 				{
-					cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
+					cout << "--------------------" << endl;
 					cout << "The animal is: Eagle" << endl;
-					cout << "~~~~~~~~~~~~~~~~~~~~~" << endl;
+					cout << "--------------------" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
 					while (IsExist(TempName) == true)//check if already exist
@@ -332,7 +260,7 @@ void ZooManagement::Init()
 				else if (aftertype == 2)//hawk
 				{
 					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "The animal is: Hawk" << endl;
+					cout << "The animal is: Parrot" << endl;
 					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
@@ -355,41 +283,24 @@ void ZooManagement::Init()
 					cin >> MaxHeight;
 					cout << "Enter the animal's tail's length:";
 					cin >> TailLength;
-					Temp = new Hawk(TempName, Age, MaxHeight, AirSpeed, TailLength);//create pointer of type hawk
+					do
+					{
+						cout << "Please choose colors for the parrot: " << endl << "1.Red/Blue" << endl << "2.Yellow/Blue" << endl << "3.Green/Black" << endl;
+						cin >> choose;
+						if (choose == 1)
+							strcpy(TempColor, "Red/Blue");
+						else if (choose == 2)
+							strcpy(TempColor, "Yellow/Blue");
+						else if (choose == 3)
+							strcpy(TempColor, "Green/Black");
+					} while (choose > 3 || choose < 1);
+
+					migratory = false;
+
+					Temp = new Parrot(TempName, Age, AirSpeed, migratory, TempColor);//create pointer of type Parrot
 					ZooManagement::operator+=(Temp);
 				}
-				else if (aftertype == 3)//seagull
-				{
-					cout << "~~~~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "The animal is: Seagull" << endl;
-					cout << "~~~~~~~~~~~~~~~~~~~~~~" << endl;
-					cout << "Enter name:";
-					cin >> TempName;
-					while (IsExist(TempName) == true)//check if already exist
-					{
-						cout << "Name already exist, please another name." << endl;
-						cout << "Enter name:";
-						cin >> TempName;
-					}
-					while (Vaild_Name(TempName) == false)//check if name isnt valid
-					{
-						cout << "Enter name:";
-						cin >> TempName;
-					}
-					cout << "Enter age:";
-					cin >> Age;
-					cout << "Enter the animal's swim speed:";
-					cin >> SwimSpeed;
-					cout << "Enter the animal's air speed:";
-					cin >> AirSpeed;
-					cout << "Enter the animal's weight:";
-					cin >> Weight;
-					Temp = new Seguall(TempName, Age, SwimSpeed, AirSpeed, Weight);//create pointer of type seagull
-					ZooManagement::operator+=(Temp);
-				}
-				else
-					cout << "Invaild input" << endl;
-				break;
+
 			}
 			default:
 				cout << "Invaild input." << endl;
@@ -397,7 +308,7 @@ void ZooManagement::Init()
 			}
 			system("cls");//Screen reset
 			break;
-		}
+			}
 		case(2)://remove animal
 		{
 			cout << "Please enter animal's name to remove: ";
@@ -446,6 +357,7 @@ void ZooManagement::Init()
 			break;
 		}
 
+		}
 	}
 
 }
@@ -516,7 +428,6 @@ void ZooManagement::operator-=(char* name)
 		Arr[i] = TempArr[i];//copy the array without the name entered
 	}
 	delete[] TempArr;//Dynamic memory release
-	Animal::count--;//Static variable update
 }
 
 

@@ -11,7 +11,7 @@ Lion::Lion()
 	weight = 0;
 }
 
-Lion::Lion(char* name, float age, float Land_Speed, float weight) :Animal(name, age), Land(name, age, Land_Speed)
+Lion::Lion(char* name, int age, float Land_Speed, float weight) :Animal(name, age), Land(name, age, Land_Speed)
 {
 	this->weight = weight;
 }

@@ -12,7 +12,7 @@ Parrot::Parrot()
 	Colors = NULL;
 }
 
-Parrot::Parrot(char* name, float age, float air_speed, bool migratory, char* Colors) :Animal(name, age), Air(name, age, air_speed),Bird(name,age, air_speed,migratory)
+Parrot::Parrot(char* name, int age, float air_speed, bool migratory, char* Colors) :Animal(name, age), Air(name, age, air_speed),Bird(name,age, air_speed,migratory)
 {
 	this->Colors = new char[strlen(Colors) + 1];
 	if (this->Colors != NULL)

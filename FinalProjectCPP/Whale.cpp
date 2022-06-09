@@ -13,7 +13,7 @@ Whale::Whale()
 	fit = 0;
 }
 
-Whale::Whale(char* name, float age, float Swim_Speed, char* foodtype, int fit) : Animal(name, age), Water(name, age, Swim_Speed), Mammal(name, age, Swim_Speed, foodtype)
+Whale::Whale(char* name, int age, float Swim_Speed, char* foodtype, int fit) : Animal(name, age), Water(name, age, Swim_Speed), Mammal(name, age, Swim_Speed, foodtype)
 {
 	this->fit = fit;
 }

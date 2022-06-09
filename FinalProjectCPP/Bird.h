@@ -11,16 +11,15 @@ private:
 public:
 	~Bird() {}
 	Bird() { migratory = false; }
-	Bird(char* name, float age, float flight_speed, bool migratory): Animal(name, age), Air(name, age, flight_speed)
+	Bird(char* name, int age, float flight_speed, bool migratory): Animal(name, age), Air(name, age, flight_speed)
 	{
 		this->migratory = migratory;
 	}
-	virtual bool if_migratory(int choose) = 0;
 	virtual void print()const
 	{
 		Animal::print();
 		Air::print();
-		if (if_migratory)
+		if (migratory)
 			cout << "His migratory bird" << endl;
 		else
 			cout << "His not migratory bird" << endl;

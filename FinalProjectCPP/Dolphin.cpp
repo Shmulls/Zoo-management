@@ -13,7 +13,7 @@ Dolphin::Dolphin()
 	this->Jump_Height = 0;
 }
 
-Dolphin::Dolphin(char* name, float age, float Swim_Speed, char* foodtype, float jump_height) :Water(name, age, Swim_Speed), Animal(name, age), Mammal(name, age, Swim_Speed, foodtype)
+Dolphin::Dolphin(char* name, int age, float Swim_Speed, char* foodtype, float jump_height) :Water(name, age, Swim_Speed), Animal(name, age), Mammal(name, age, Swim_Speed, foodtype)
 {
 	this->Jump_Height = jump_height;
 }

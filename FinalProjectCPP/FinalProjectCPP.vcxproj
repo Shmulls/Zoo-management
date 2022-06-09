@@ -136,7 +136,6 @@
     <ClInclude Include="Parrot.h" />
     <ClInclude Include="Land.h" />
     <ClInclude Include="Lion.h" />
-    <ClInclude Include="Main.h" />
     <ClInclude Include="Mammal.h" />
     <ClInclude Include="Whale.h" />
     <ClInclude Include="Water.h" />

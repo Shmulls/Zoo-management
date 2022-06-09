@@ -10,7 +10,7 @@ protected:
 	float Swim_Speed;
 public:
 	Water();//default ctor
-	Water(char* name, float age, float Swim_Speed);//ctor
+	Water(char* name, int age, float Swim_Speed);//ctor
 	Water(const Water& w);//copy ctor
 	virtual ~Water();//dctor
 	virtual void print() const;//print func

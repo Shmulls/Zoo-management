@@ -48,9 +48,6 @@
     <ClInclude Include="ZooManagement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Mammal.h">
       <Filter>Header Files</Filter>
     </ClInclude>

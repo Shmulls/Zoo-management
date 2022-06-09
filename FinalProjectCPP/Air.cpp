@@ -11,7 +11,7 @@ Air::Air()
 	this->Air_Speed = 0;
 }
 
-Air::Air(char* name, float age, float Air_Speed) :Animal(name, age)
+Air::Air(char* name, int age, float Air_Speed) :Animal(name, age)
 {
 	this->Air_Speed = Air_Speed;
 }

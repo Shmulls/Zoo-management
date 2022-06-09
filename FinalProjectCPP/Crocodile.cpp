@@ -12,7 +12,7 @@ Crocodile::Crocodile()
 	weight = 0.0;
 }
 
-Crocodile::Crocodile(char* name, float age, float Swim_Speed, float Land_Speed, float weight) :Animal(name, age), Water(name, age, Swim_Speed), Land(name, age, Land_Speed)
+Crocodile::Crocodile(char* name, int age, float Swim_Speed, float Land_Speed, float weight) :Animal(name, age), Water(name, age, Swim_Speed), Land(name, age, Land_Speed)
 {
 	this->weight = weight;
 }

@@ -10,7 +10,7 @@ protected:
 	float Air_Speed;
 public:
 	Air();//default ctor
-	Air(char* name, float age, float Air_Speed);//ctor
+	Air(char* name, int age, float Air_Speed);//ctor
 	Air(const Air& A);//copy ctor
 	virtual ~Air();//dctor
 	virtual void print() const;//print func

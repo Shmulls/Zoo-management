@@ -11,7 +11,7 @@ Water::Water()
 	this->Swim_Speed = 0;
 }
 
-Water::Water(char* name, float age, float Swim_Speed) :Animal(name, age)
+Water::Water(char* name, int age, float Swim_Speed) :Animal(name, age)
 {
 	this->Swim_Speed = Swim_Speed;
 }

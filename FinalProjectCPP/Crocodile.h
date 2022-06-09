@@ -12,7 +12,7 @@ protected:
 	float weight;
 public:
 	Crocodile();//default ctor
-	Crocodile(char* name, float age, float Swim_Speed, float Land_Speed, float weight);//ctor
+	Crocodile(char* name, int age, float Swim_Speed, float Land_Speed, float weight);//ctor
 	Crocodile(const Crocodile& C);//copy ctor
 	virtual ~Crocodile() {}//dctor
 	virtual void print() const;//print func

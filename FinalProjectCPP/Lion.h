@@ -11,7 +11,7 @@ protected:
 	float weight;
 public:
 	Lion();//default ctor
-	Lion(char* name, float age, float Land_Speed, float weight);//ctor
+	Lion(char* name, int age, float Land_Speed, float weight);//ctor
 	Lion(const Lion& L);//copy ctor
 	virtual ~Lion() {}//dctor
 	virtual void print() const;//print func

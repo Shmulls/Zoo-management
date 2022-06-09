@@ -11,7 +11,7 @@ Eagle::Eagle()
 	this->Max_Height = 0;
 }
 
-Eagle::Eagle(char* name, float age, float Air_Speed, float Max_Height) :Air(name, age, Air_Speed), Animal(name, age)
+Eagle::Eagle(char* name, int age, float Air_Speed, float Max_Height) :Air(name, age, Air_Speed), Animal(name, age)
 {
 	this->Max_Height = Max_Height;
 }

@@ -13,7 +13,7 @@ private:
 	int fit;
 public:
 	Whale();//default ctor
-	Whale(char* name, float age, float Swim_Speed, char* foodtype, int fit);
+	Whale(char* name, int age, float Swim_Speed, char* foodtype, int fit);
 	Whale(const Whale& sh);//copy ctor
 	virtual ~Whale();//dctor
 	virtual void print() const;//print func

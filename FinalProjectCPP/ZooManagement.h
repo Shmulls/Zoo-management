@@ -3,16 +3,16 @@
 #include <iostream>
 #include "Air.h"
 #include "Animal.h"
-//#include "Cat.h"
 #include "Crocodile.h"
 #include "Dolphin.h"
 #include "Eagle.h"
-#include "Hawk.h"
+#include "Parrot.h"
 #include "Land.h"
 #include "Lion.h"
-#include "Seguall.h"
-#include "Shark.h"
+#include "Whale.h"
 #include "Water.h"
+#include "Mammal.h"
+#include "Bird.h"
 
 using namespace std;
 

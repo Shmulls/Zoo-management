@@ -10,7 +10,7 @@ protected:
 	float Land_Speed;
 public:
 	Land();//default ctor
-	Land(char* name, float age, float Land_Speed);//ctor
+	Land(char* name, int age, float Land_Speed);//ctor
 	Land(const Land& L);//copy ctor
 	virtual ~Land() {}//dctor
 	virtual void print() const;//print func

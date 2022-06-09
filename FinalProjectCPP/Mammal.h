@@ -11,7 +11,7 @@ protected:
 public:
 	~Mammal() { delete[]foodtype; }
 	Mammal() { foodtype = NULL; }
-	Mammal(char* name, float age, float Swim_Speed, char* ft) : Animal(name, age), Water(name, age, Swim_Speed)
+	Mammal(char* name, int age, float Swim_Speed, char* ft) : Animal(name, age), Water(name, age, Swim_Speed)
 	{
 		foodtype = new char[strlen(ft) + 1];
 		if (ft != NULL)

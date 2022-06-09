@@ -10,7 +10,7 @@ Land::Land()
 	Land_Speed = 0;
 }
 
-Land::Land(char* name, float age, float Land_Speed) :Animal(name, age)
+Land::Land(char* name, int age, float Land_Speed) :Animal(name, age)
 {
 	this->Land_Speed = Land_Speed;
 }

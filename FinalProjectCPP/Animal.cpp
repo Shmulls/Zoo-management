@@ -3,7 +3,7 @@
 Animal::Animal()
 {
 	name = NULL;
-	age = 0.0;
+	age = 0;
 }
 
 Animal::Animal(char* name, int age)
@@ -18,6 +18,7 @@ Animal::Animal(char* name, int age)
 	{
 		name = NULL;
 		cout << "Name ctor is NULL" << endl;
+		this->age = 0;
 	}
 }
 
