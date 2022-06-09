@@ -7,15 +7,15 @@
 
 using namespace std;
 
-class Shark :public Dolphin
+class Whale :public Dolphin
 {
 private:
 	bool vegetarian;
 public:
-	Shark();//default ctor
-	Shark(char* name, float age, float Swim_Speed, float Jump_Height, bool veg);//ctor
-	Shark(const Shark& sh);//copy ctor
-	virtual ~Shark();//dctor
+	Whale();//default ctor
+	Whale(char* name, float age, float Swim_Speed, float Jump_Height, bool veg);//ctor
+	Whale(const Whale& sh);//copy ctor
+	virtual ~Whale();//dctor
 	virtual void print() const;//print func
 };
 

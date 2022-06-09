@@ -39,7 +39,7 @@
     <ClInclude Include="Dolphin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Shark.h">
+    <ClInclude Include="Whale.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Crocodile.h">
@@ -51,7 +51,10 @@
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Seagull.h">
+    <ClInclude Include="Mammal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bird.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -80,7 +83,7 @@
     <ClCompile Include="Dolphin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shark.cpp">
+    <ClCompile Include="Whale.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Crocodile.cpp">
@@ -90,9 +93,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Seagull.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

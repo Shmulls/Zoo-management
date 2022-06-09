@@ -6,7 +6,7 @@ Animal::Animal()
 	age = 0.0;
 }
 
-Animal::Animal(char* name, float age)
+Animal::Animal(char* name, int age)
 {
 	this->name = new char [strlen(name) + 1];
 	if (this->name != NULL)

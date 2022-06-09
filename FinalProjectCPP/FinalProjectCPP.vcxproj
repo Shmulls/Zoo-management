@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="Air.h" />
     <ClInclude Include="Animal.h" />
+    <ClInclude Include="Bird.h" />
     <ClInclude Include="Crocodile.h" />
     <ClInclude Include="Dolphin.h" />
     <ClInclude Include="Eagle.h" />
@@ -136,8 +137,8 @@
     <ClInclude Include="Land.h" />
     <ClInclude Include="Lion.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="Seagull.h" />
-    <ClInclude Include="Shark.h" />
+    <ClInclude Include="Mammal.h" />
+    <ClInclude Include="Whale.h" />
     <ClInclude Include="Water.h" />
     <ClInclude Include="ZooManagement.h" />
   </ItemGroup>
@@ -151,8 +152,7 @@
     <ClCompile Include="Land.cpp" />
     <ClCompile Include="Lion.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Seagull.cpp" />
-    <ClCompile Include="Shark.cpp" />
+    <ClCompile Include="Whale.cpp" />
     <ClCompile Include="Water.cpp" />
     <ClCompile Include="ZooManagement.cpp" />
   </ItemGroup>

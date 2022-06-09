@@ -4,33 +4,33 @@
 #include "Animal.h"
 #include "Water.h"
 #include "Dolphin.h"
-#include "Shark.h"
+#include "Whale.h"
 
 using namespace std;
 
-Shark::Shark()
+Whale::Whale()
 {
 	this->vegetarian = false;
 }
 
-Shark::Shark(char* name, float age, float Swim_Speed, float Jump_Height, bool veg) :Dolphin(name, age, Swim_Speed, Jump_Height), Animal(name, age)
+Whale::Whale(char* name, float age, float Swim_Speed, float Jump_Height, bool veg) :Dolphin(name, age, Swim_Speed, Jump_Height), Animal(name, age)
 {
 	this->vegetarian = veg;
 }
 
-Shark::Shark(const Shark& sh) : Dolphin(sh), Animal(sh)
+Whale::Whale(const Whale& sh) : Dolphin(sh), Animal(sh)
 {
 	this->vegetarian = sh.vegetarian;
 }
 
-Shark::~Shark()
+Whale::~Whale()
 {
 }
 
-void Shark::print() const
+void Whale::print() const
 {
 	Water::print();
-	cout << "The Animal is: Shark" << endl;
+	cout << "The Animal is: Whale" << endl;
 	cout << "Name: " << name << endl;
 	cout << "Age: " << age << endl;
 	cout << "It's speed is: " << Swim_Speed << " Kmh." << endl;

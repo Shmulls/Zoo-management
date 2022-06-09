@@ -8,11 +8,11 @@ class Animal
 {
 protected:
 	char* name;
-	float age;
+	int age;
 	static int count;//number of animals
 public:
 	Animal();//default ctor
-	Animal(char* name, float age);//ctor
+	Animal(char* name, int age);//ctor
 	Animal(const Animal& A);//copy ctor
 	virtual ~Animal();//dctor
 	virtual void print() const = 0;//Pure virtual func
