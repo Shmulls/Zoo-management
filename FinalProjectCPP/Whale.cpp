@@ -31,6 +31,6 @@ void Whale::print() const
 {
 	Mammal::print();
 	cout << "The Animal is: Whale" << endl;
-	cout << "The whale fit is: " << fit << endl;
+	cout << "The whale fit is: " << fit << "Tall." << endl;
 }
 

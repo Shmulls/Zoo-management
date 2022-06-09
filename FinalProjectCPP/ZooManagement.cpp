@@ -252,7 +252,7 @@ void ZooManagement::Init()
 					cin >> Age;
 					cout << "Enter the animal's speed:";
 					cin >> AirSpeed;
-					cout << "Enter the animal's heigth jump:";
+					cout << "Enter the animal's max height:";
 					cin >> MaxHeight;
 					Temp = new Eagle(TempName, Age, AirSpeed, MaxHeight);//create pointer of type eagle
 					ZooManagement::operator+=(Temp);
@@ -347,7 +347,8 @@ void ZooManagement::Init()
 		}
 		case(5)://exit
 		{
-			cout << "Bye Bye" << endl;
+			cout << endl;
+			cout << "The program shutting down" << endl;
 			break;
 		}
 		default:
@@ -357,7 +358,6 @@ void ZooManagement::Init()
 
 		}
 	}
-
 
 
 bool ZooManagement::Find(char* name)
@@ -382,6 +382,8 @@ void ZooManagement::operator+=(Animal* a)
 		Size = 1;
 		Arr = new Animal * [Size];//Dynamic memory allocation
 		Arr[0] = a;//Inserting the pointer into the array
+		cout << endl;
+		cout << "-------------" << endl;
 		cout << "Animal Added!" << endl;
 	}
 	else//The array is not empty
@@ -395,6 +397,8 @@ void ZooManagement::operator+=(Animal* a)
 		for (int i = 0; i < Size - 1; i++)
 			Arr[i] = TempArr[i];
 		Arr[Size - 1] = a;///Inserting the pointer into the array
+		cout << endl;
+		cout << "-------------" << endl;
 		cout << "Animal Added!" << endl;
 	}
 	delete[] TempArr;//Deleting Temporary array
@@ -426,6 +430,8 @@ void ZooManagement::operator-=(char* name)
 	{
 		Arr[i] = TempArr[i];//copy the array without the name entered
 	}
+	cout << endl;
+	cout << "-------------" << endl;
 	cout << "Animal removed!" << endl;
 	delete[] TempArr;//Dynamic memory release
 }
@@ -451,9 +457,6 @@ void ZooManagement::PrintAll()
 	cout << endl << endl << "-------------------------------" << endl;
 	cout << "The number of all animals in the zoo is: " << Animal::print_static();
 	cout << endl;
-
-
-
 }
 
 bool ZooManagement::Vaild_Name(char* name)
