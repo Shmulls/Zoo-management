@@ -29,8 +29,8 @@ Whale::~Whale()
 
 void Whale::print() const
 {
-	Water::print();
 	Mammal::print();
-	cout << "The whale is: " << fit << "fit high" << endl;
+	cout << "The Animal is: Whale" << endl;
+	cout << "The whale fit is: " << fit << endl;
 }
 

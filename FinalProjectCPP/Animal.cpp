@@ -20,6 +20,7 @@ Animal::Animal(char* name, int age)
 		cout << "Name ctor is NULL" << endl;
 		this->age = 0;
 	}
+	count++;
 }
 
 Animal::Animal(const Animal& A)
@@ -39,4 +40,9 @@ Animal::~Animal()
 {
 	delete[]name;
 	count--;
+}
+
+void Animal::print() const
+{
+	cout << "Nickname of the animal: " << name << endl << "Age: " << age << endl;
 }

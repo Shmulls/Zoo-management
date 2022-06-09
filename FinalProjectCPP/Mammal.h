@@ -19,7 +19,7 @@ public:
 		else
 			foodtype = NULL;
 	}
-	virtual void print()const
+	virtual void print() const
 	{
 		Animal::print();
 		cout << "Food type: " << foodtype << endl;

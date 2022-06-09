@@ -30,5 +30,4 @@ void Air::print() const
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	cout << "    Air animal    " << endl;
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl << endl;
-
 }

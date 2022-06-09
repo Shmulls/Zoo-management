@@ -33,7 +33,7 @@ void ZooManagement::Init()
 		cout << endl << "~~~~~~~~ Welcome to the ZOO ~~~~~~~~" << endl;
 		cout << "------------------------------------- " << endl;
 		cout << "What would you like to do ?" << endl << endl;
-		cout << "1. Add an animal" << endl << "2. Remove an animal" << endl << "3. Track an animak" << endl << "4. Print all animals" << endl << "5. Exit" << endl;
+		cout << "1. Add an animal" << endl << "2. Remove an animal" << endl << "3. Track an animal" << endl << "4. Print all animals" << endl << "5. Exit" << endl;
 		cin >> choise;
 		switch (choise)
 		{
@@ -50,7 +50,7 @@ void ZooManagement::Init()
 			{
 				cout << "The animals are: " << endl;
 				cout << "----------------- " << endl;
-				cout << "1. Lion" << endl << "2. Cat" << endl << "3. Crocodil" << endl;
+				cout << "1. Lion" << endl << "2. Crocodile" << endl;
 				cin >> aftertype;
 				cout << endl;
 				if (aftertype == 1)//lion
@@ -80,7 +80,7 @@ void ZooManagement::Init()
 					Temp = new Lion(TempName, Age, LandSpeed, Weight);//create pointer of type Lion
 					ZooManagement::operator+=(Temp);
 				}
-				else if (aftertype == 3)//crocodile
+				else if (aftertype == 2)//crocodile
 				{
 					cout << "~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "The animal is: Crocodile" << endl;
@@ -109,15 +109,13 @@ void ZooManagement::Init()
 					Temp = new Crocodile(TempName, Age, SwimSpeed, LandSpeed, Weight);//create pointer of type Crocodile
 					ZooManagement::operator+=(Temp);
 				}
-				else
-					cout << "Invaild input" << endl;
 				break;
 			}
 			case(2)://Water
 			{
 				cout << "The animals are: " << endl;
 				cout << "----------------- " << endl;
-				cout << "1. Dolphin" << endl << "2. Shark" << endl << "3. Crocodil" << endl << "4. Seagull" << endl;
+				cout << "1. Dolphin" << endl << "2. Whale" << endl << "3. Crocodil" << endl;
 				cin >> aftertype;
 				cout << endl;
 				if (aftertype == 1)//dolphin
@@ -157,11 +155,11 @@ void ZooManagement::Init()
 					Temp = new Dolphin(TempName, Age, SwimSpeed, foodtype, HeightJump);//create pointer of type Dolphin
 					ZooManagement::operator+=(Temp);
 				}
-				else if (aftertype == 2)//Shark
+				else if (aftertype == 2)//Whale
 				{
-					cout << "--------------------" << endl;
+					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "The animal is: Whale" << endl;
-					cout << "--------------------" << endl;
+					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
 					while (IsExist(TempName) == true)//check if already exist
@@ -197,9 +195,9 @@ void ZooManagement::Init()
 				}
 				else if (aftertype == 3)//crocodile
 				{
-					cout << "------------------------" << endl;
+					cout << "~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "The animal is: Crocodile" << endl;
-					cout << "------------------------" << endl;
+					cout << "~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
 					while (IsExist(TempName) == true)//check if already exist
@@ -224,17 +222,19 @@ void ZooManagement::Init()
 					Temp = new Crocodile(TempName, Age, SwimSpeed, LandSpeed, Weight);//create pointer of type Crocodile
 					ZooManagement::operator+=(Temp);
 				}
+				break;
+			}
 			case(3)://Air
 			{
 				cout << "The animals are: " << endl;
 				cout << "----------------- " << endl;
-				cout << "1. Eagle" << endl << "2. Hawk" << endl << "3. Seagull" << endl;
+				cout << "1. Eagle" << endl << "2. Parrot" << endl;
 				cin >> aftertype;
 				if (aftertype == 1)//eagle
 				{
-					cout << "--------------------" << endl;
+					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "The animal is: Eagle" << endl;
-					cout << "--------------------" << endl;
+					cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 					cout << "Enter name:";
 					cin >> TempName;
 					while (IsExist(TempName) == true)//check if already exist
@@ -300,13 +300,12 @@ void ZooManagement::Init()
 					Temp = new Parrot(TempName, Age, AirSpeed, migratory, TempColor);//create pointer of type Parrot
 					ZooManagement::operator+=(Temp);
 				}
-
+				break;
 			}
 			default:
 				cout << "Invaild input." << endl;
 				break;
 			}
-			system("cls");//Screen reset
 			break;
 			}
 		case(2)://remove animal
@@ -325,7 +324,6 @@ void ZooManagement::Init()
 			}
 			else
 				ZooManagement::operator-=(TempName);
-			system("cls");//Screen reset
 			break;
 		}
 		case(3)://track animal
@@ -360,7 +358,7 @@ void ZooManagement::Init()
 		}
 	}
 
-}
+
 
 bool ZooManagement::Find(char* name)
 {
@@ -384,7 +382,7 @@ void ZooManagement::operator+=(Animal* a)
 		Size = 1;
 		Arr = new Animal * [Size];//Dynamic memory allocation
 		Arr[0] = a;//Inserting the pointer into the array
-
+		cout << "Animal Added!" << endl;
 	}
 	else//The array is not empty
 	{
@@ -397,6 +395,7 @@ void ZooManagement::operator+=(Animal* a)
 		for (int i = 0; i < Size - 1; i++)
 			Arr[i] = TempArr[i];
 		Arr[Size - 1] = a;///Inserting the pointer into the array
+		cout << "Animal Added!" << endl;
 	}
 	delete[] TempArr;//Deleting Temporary array
 }
@@ -427,6 +426,7 @@ void ZooManagement::operator-=(char* name)
 	{
 		Arr[i] = TempArr[i];//copy the array without the name entered
 	}
+	cout << "Animal removed!" << endl;
 	delete[] TempArr;//Dynamic memory release
 }
 

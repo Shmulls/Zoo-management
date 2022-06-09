@@ -27,9 +27,10 @@ Water::~Water()
 
 void Water::print() const
 {
-
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	cout << "    Water animal    " << endl;
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl << endl;
+
+	cout << "Swim speed: " << Swim_Speed << endl;
 }
 

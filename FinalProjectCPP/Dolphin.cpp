@@ -31,5 +31,6 @@ void Dolphin::print() const
 {
 	Water::print();
 	Mammal::print();
+	cout << "The Animal is: Dolphin" << endl;
 	cout << "The Dolphin jump height is: " << Jump_Height << "meters." << endl;
 }

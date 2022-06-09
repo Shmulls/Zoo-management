@@ -22,7 +22,6 @@ Land::Land(const Land& L) : Animal(L)
 
 void Land::print() const
 {
-
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl;
 	cout << "    Land animal    " << endl;
 	cout << "~~~~~~~~~~~~~~~~~~~~" << endl << endl;
