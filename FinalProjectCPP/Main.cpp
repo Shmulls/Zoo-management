@@ -14,7 +14,6 @@
 #include "Parrot.h"
 #include "Land.h"
 #include "Lion.h"
-#include "Seagull.h"
 #include "Whale.h"
 #include "Water.h"
 #include "Mammal.h"
